@@ -1,0 +1,17 @@
+:root.dark {
+    --font: sans-serif;
+
+    --bg-0: #000;
+    --bg-1: #555;
+
+    --fg-0: #fff;
+}
+
+:root.light {
+    --font: sans-serif;
+    
+    --bg-0: #fff;
+    --bg-1: #999;
+
+    --fg-0: #000;
+}
