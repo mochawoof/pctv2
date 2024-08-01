@@ -1,5 +1,5 @@
 :root.dark {
-    --font: sans-serif;
+    --font: Arial;
 
     --bg-0: #000;
     --bg-1: #555;
@@ -8,7 +8,7 @@
 }
 
 :root.light {
-    --font: sans-serif;
+    --font: Arial;
     
     --bg-0: #fff;
     --bg-1: #999;
