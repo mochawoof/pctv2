@@ -4,6 +4,7 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     name: "PCTV",
+    executableName: "pctv",
     asar: true,
     osxSign: {},
     appCategoryType: "public.app-category.video"
@@ -20,11 +21,11 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {},
-    },
-    {
-      name: '@electron-forge/maker-rpm',
-      config: {},
+      config: {
+        options: {
+          categories: ["Video"]
+        }
+      },
     },
   ],
   plugins: [
