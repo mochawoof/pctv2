@@ -23,7 +23,7 @@ module.exports = {
       name: '@electron-forge/maker-deb',
       config: {
         options: {
-          categories: "Video"
+          categories: ["AudioVideo", "Video"]
         }
       },
     },
