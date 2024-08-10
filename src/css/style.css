@@ -1,0 +1,12 @@
+img {
+    pointer-events: none;
+}
+
+#templateChannel {
+    display: none;
+}
+
+#playerPane {
+    background: #000;
+    overflow: hidden;
+}

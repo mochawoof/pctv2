@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8">
+    <title>PCTV</title>
+    <link rel="stylesheet" href="css/photon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="videojs/video-js.css">
   </head>
   <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Welcome to PCTV!</h1>
+
+        <div class="toolbar-actions">
+          <div class="btn-group">
+            <button class="btn btn-default" title="Channels">
+              <span class="icon icon-menu"></span>
+            </button>
+            <button class="btn btn-default" title="Favorites">
+              <span class="icon icon-book"></span>
+            </button>
+          </div>
+
+          <button class="btn btn-default pull-right" title="Settings">
+            <span class="icon icon-cog"></span>
+          </button>
+          <button class="btn btn-default pull-right" title="Sources">
+            <span class="icon icon-network"></span>
+          </button>
+        </div>
+      </header>
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane-sm sidebar" id="sidebarPane">
+            <ul class="list-group">
+              <li class="list-group-item" id="templateChannel">
+                <img class="img-circle media-object pull-left" src="assets/channel.png" width="32" height="32">
+                <div class="media-body">
+                  <strong>fuckhead TV</strong>
+                  <p>
+                    <button class="btn btn-default pull-right" title="Favorite">
+                      <span class="icon icon-star-empty"></span>
+                    </button>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="pane" id="playerPane">
+            <video id="player" class="video-js vjs-default-skin vjs-fill" controls>
+              <source id="playerSrc" type="application/x-mpegURL">
+            </video>
+          </div>
+        </div>
+      </div>
   </body>
+  <script src="videojs/video.js"></script>
+  <script src="app.js"></script>
 </html>
