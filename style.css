@@ -52,12 +52,22 @@ video#player {
     white-space: nowrap;
 }
 
-#controls #controls_left a {
-    padding-left: 20px;
+#controls #controls_left {
+    padding-left: 10px;
 }
 
-#controls #controls_right a {
-    padding-right: 20px;
+#controls #controls_right {
+    padding-right: 10px;
+}
+
+#controls div a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#controls div a {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #loader {
