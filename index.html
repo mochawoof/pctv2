@@ -9,18 +9,23 @@
 </head>
 
 <body>
-    <video id="player" loop=true
-        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"></video>
-    <div id="controls">
-        <div id="controls_left">
-            <a href="#" title="Channels"><i class="fa-solid fa-list"></i></a>
-            <a href="#" title="Tune Backwards"><i class="fa-solid fa-backward"></i></a>
-            <a href="#" title="Pause"><i class="fa-solid fa-pause"></i></a>
-            <a href="#" title="Tune Forwards"><i class="fa-solid fa-forward"></i></a>
-        </div>
-        <div id="controls_right">
-            <a href="#" title="Toggle Fullscreen" onclick="toggle_fullscreen()"><i id="fullscreen_icon"
-                    class="fa-solid fa-expand"></i></a>
+    <div id="content">
+        <video id="player" loop=true
+            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"></video>
+        <div id="controls" class="controls_bar">
+            <div id="channel_controls" class="controls_bar">
+                Work in progress
+            </div>
+            <div id="controls_left">
+                <a href="#" title="Channels" onclick="toggle_channels_view()"><i class="fa-solid fa-list"></i></a>
+                <a href="#" title="Tune Backwards"><i class="fa-solid fa-backward"></i></a>
+                <a href="#" title="Pause"><i class="fa-solid fa-pause"></i></a>
+                <a href="#" title="Tune Forwards"><i class="fa-solid fa-forward"></i></a>
+            </div>
+            <div id="controls_right">
+                <a href="#" title="Toggle Fullscreen" onclick="toggle_fullscreen()"><i id="fullscreen_icon"
+                        class="fa-solid fa-expand"></i></a>
+            </div>
         </div>
     </div>
     <div id="loader"></div>

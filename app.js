@@ -5,6 +5,7 @@ let CONTROLS_HIDE_DELAY = 2000;
 
 let player = document.querySelector("#player");
 let controls = document.querySelector("#controls");
+let channel_controls = document.querySelector("#channel_controls");
 
 let fullscreen_icon = document.querySelector("#fullscreen_icon");
 
@@ -63,5 +64,13 @@ function peek_controls() {
 
 window.onmousemove = peek_controls;
 window.onclick = peek_controls;
+
+function toggle_channels_view() {
+    if (channel_controls.style.opacity == "0") {
+        channel_controls.style.opacity = "1";
+    } else {
+        channel_controls.style.opacity = "0";
+    }
+}
 
 load_source("https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8");
