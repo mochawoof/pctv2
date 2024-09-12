@@ -6,6 +6,8 @@ let CONTROLS_HIDE_DELAY = 2000;
 let player = document.querySelector("#player");
 let controls = document.querySelector("#controls");
 
+let fullscreen_icon = document.querySelector("#fullscreen_icon");
+
 // Utility functions
 function fetch_text(url, cb) {
     let request = fetch(url);
@@ -28,6 +30,23 @@ function load_source(src, cb) {
             console.log(lines[500]);
         }
     });
+}
+
+function toggle_fullscreen() {
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.body.requestFullscreen();
+    }
+}
+document.onfullscreenchange = () => {
+    if (document.fullscreenElement) {
+        fullscreen_icon.classList.remove("fa-expand");
+        fullscreen_icon.classList.add("fa-compress");
+    } else {
+        fullscreen_icon.classList.remove("fa-compress");
+        fullscreen_icon.classList.add("fa-expand");
+    }
 }
 
 // Controls functions
